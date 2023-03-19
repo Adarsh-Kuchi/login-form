@@ -10,6 +10,7 @@ export class ApiService {
 
   baseUrl = 'https://snapkaro.com/eazyrooms_staging/api/';
 
+
   registerUser(data: any) {
     console.log(data)
     return this.http.post(this.baseUrl + 'user_registeration', data);
@@ -17,6 +18,7 @@ export class ApiService {
   }
 
   loginUser(data: any) {
+    console.log("hai")
     return this.http.post(this.baseUrl + 'userlogin', data);
   }
 }

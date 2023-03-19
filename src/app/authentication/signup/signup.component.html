@@ -15,9 +15,8 @@
         <div class="row mb-3">
           <div class="col-6">
             <label  class="form-label">First Name</label>
-            <input type="text" formControlName="firstName" class="form-control" [(ngModel)]="firstName"  required>
-
-            <div *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+            <input type="text" formControlName="firstName" class="form-control"  required>
+            <div *ngIf= "registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
                 First Name is required.
             </div>
 
@@ -25,7 +24,7 @@
           <div class="col-6">
             <label  class="form-label">Last Name</label>
             <input type="text" formControlName="lastName" class="form-control" required>
-            <div *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+            <div *ngIf= "registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
               First Name is required.
           </div>
 
@@ -34,7 +33,7 @@
         <div class="col-12 mb-3">
           <label class="form-label">Email</label>
           <input type="email" formControlName="email" class="form-control" required >
-          <div *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+          <div *ngIf= "registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
             First Name is required.
         </div>
 
@@ -42,7 +41,7 @@
         <div class="col-12 mb-3">
           <label  class="form-label">Password</label>
           <input type="password" formControlName="password" class="form-control" required>
-          <div *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+          <div *ngIf= "registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
             First Name is required.
         </div>
 
@@ -50,7 +49,7 @@
         <div class="col-12 mb-3">
           <label  class="form-label">Phone Number</label>
           <input type="number" formControlName="phoneNumber" class="form-control" required>
-          <div *ngIf="registrationForm.get('phoneNumber')?.invalid && (registrationForm.get('phoneNumber')?.dirty || registrationForm.get('phoneNumber')?.touched)">
+          <div *ngIf= "registrationForm.get('phoneNumber')?.invalid && (registrationForm.get('phoneNumber')?.dirty || registrationForm.get('phoneNumber')?.touched)">
             First Name is required.
         </div>
 
@@ -59,7 +58,7 @@
           <div class="col-6">
             <label for="first-name" class="form-label">City</label>
             <input type="text" formControlName="cityName" class="form-control" required>
-            <div *ngIf="registrationForm.get('cityName')?.invalid && (registrationForm.get('cityName')?.dirty || registrationForm.get('cityName')?.touched)">
+            <div *ngIf= "registrationForm.get('cityName')?.invalid && (registrationForm.get('cityName')?.dirty || registrationForm.get('cityName')?.touched)">
               First Name is required.
           </div>
 
@@ -67,16 +66,16 @@
           <div class="col-6">
             <label for="last-name" class="form-label">Zip Code</label>
             <input type="number" formControlName="zipCode" class="form-control" required>
-            <div *ngIf="registrationForm.get('zipCode')?.invalid && (registrationForm.get('zipCode')?.dirty || registrationForm.get('zipCode')?.touched)">
+            <div *ngIf= "registrationForm.get('zipCode')?.invalid && (registrationForm.get('zipCode')?.dirty || registrationForm.get('zipCode')?.touched)">
               First Name is required.
           </div>
-           
+
           </div>
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" formControlName ="checkbox" class="form-check-input">
           <label class="form-check-label"  for="exampleCheck1">Check me out</label>
-          <div *ngIf="registrationForm.get('checkbox')?.invalid && (registrationForm.get('checkbox')?.dirty || registrationForm.get('checkbox')?.touched)">
+          <div *ngIf= "registrationForm.get('checkbox')?.invalid && (registrationForm.get('checkbox')?.dirty || registrationForm.get('checkbox')?.touched)">
             First Name is required.
         </div>
         </div>
