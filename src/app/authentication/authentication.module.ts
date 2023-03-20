@@ -7,7 +7,8 @@ import { SignupComponent } from './signup/signup.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+// import { ToastrModule } from 'ngx-toastr';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
 
   ]
 })

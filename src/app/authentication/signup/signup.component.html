@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="row">
-   <div class="wrapper">
-   <div class="banner col-4">
+  <div class="row main w-100">
+   <div class="wrapper d-flex">
+   <div class="banner col-6 col-sm-12 col-md-6 d-none d-md-block">
     <app-common-banner></app-common-banner>
    </div>
-    <div class="form col-8 p-5">
+    <div class="form col-12 col-sm-12 col-md-6 p-4 white-bg">
       <h4>Sign Up</h4>
       <h6>Already have an account?
         <span>
@@ -13,19 +13,19 @@
       </h6>
       <form [formGroup] = "registrationForm" (ngSubmit)="onSubmit()">
         <div class="row mb-3">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
             <label  class="form-label">First Name</label>
             <input type="text" formControlName="firstName" class="form-control"  required>
-            <div *ngIf= "registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
-                First Name is required.
+            <div  class="error" *ngIf= "registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+                First Name required.
             </div>
 
           </div>
-          <div class="col-6">
+          <div class="col-12 col-sm-6 mt-3 mt-sm-0">
             <label  class="form-label">Last Name</label>
             <input type="text" formControlName="lastName" class="form-control" required>
-            <div *ngIf= "registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
-              First Name is required.
+            <div class="error" *ngIf= "registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+              last Name required.
           </div>
 
           </div>
@@ -33,41 +33,41 @@
         <div class="col-12 mb-3">
           <label class="form-label">Email</label>
           <input type="email" formControlName="email" class="form-control" required >
-          <div *ngIf= "registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
-            First Name is required.
+          <div  class="error" *ngIf= "registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+            email required.
         </div>
 
         </div>
         <div class="col-12 mb-3">
           <label  class="form-label">Password</label>
           <input type="password" formControlName="password" class="form-control" required>
-          <div *ngIf= "registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
-            First Name is required.
+          <div class="error" *ngIf= "registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+            password required.
         </div>
 
         </div>
         <div class="col-12 mb-3">
           <label  class="form-label">Phone Number</label>
           <input type="number" formControlName="phoneNumber" class="form-control" required>
-          <div *ngIf= "registrationForm.get('phoneNumber')?.invalid && (registrationForm.get('phoneNumber')?.dirty || registrationForm.get('phoneNumber')?.touched)">
-            First Name is required.
+          <div class="error" *ngIf= "registrationForm.get('phoneNumber')?.invalid && (registrationForm.get('phoneNumber')?.dirty || registrationForm.get('phoneNumber')?.touched)">
+            phone number required. enter 10digits with starting '0' or +91
         </div>
 
         </div>
         <div class="row mb-3">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
             <label for="first-name" class="form-label">City</label>
             <input type="text" formControlName="cityName" class="form-control" required>
-            <div *ngIf= "registrationForm.get('cityName')?.invalid && (registrationForm.get('cityName')?.dirty || registrationForm.get('cityName')?.touched)">
-              First Name is required.
+            <div class="error" *ngIf= "registrationForm.get('cityName')?.invalid && (registrationForm.get('cityName')?.dirty || registrationForm.get('cityName')?.touched)">
+             city required.
           </div>
 
           </div>
-          <div class="col-6">
+          <div class="col-12 col-sm-6 mt-3 mt-sm-0">
             <label for="last-name" class="form-label">Zip Code</label>
             <input type="number" formControlName="zipCode" class="form-control" required>
-            <div *ngIf= "registrationForm.get('zipCode')?.invalid && (registrationForm.get('zipCode')?.dirty || registrationForm.get('zipCode')?.touched)">
-              First Name is required.
+            <div class="error" *ngIf= "registrationForm.get('zipCode')?.invalid && (registrationForm.get('zipCode')?.dirty || registrationForm.get('zipCode')?.touched)">
+             code required.
           </div>
 
           </div>
@@ -75,8 +75,8 @@
         <div class="mb-3 form-check">
           <input type="checkbox" formControlName ="checkbox" class="form-check-input">
           <label class="form-check-label"  for="exampleCheck1">Check me out</label>
-          <div *ngIf= "registrationForm.get('checkbox')?.invalid && (registrationForm.get('checkbox')?.dirty || registrationForm.get('checkbox')?.touched)">
-            First Name is required.
+          <div class="error" *ngIf= "registrationForm.get('checkbox')?.invalid && (registrationForm.get('checkbox')?.dirty || registrationForm.get('checkbox')?.touched)">
+           check required.
         </div>
         </div>
         <button type="submit"

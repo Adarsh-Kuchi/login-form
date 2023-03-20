@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup ,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
+// import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +15,7 @@ export class SignupComponent implements OnInit {
 
 
 
-  constructor( private fb:FormBuilder , private api:ApiService , private route:Router) {
+  constructor( private fb:FormBuilder , private api:ApiService , private route:Router ) {
 
    }
 
@@ -54,11 +56,14 @@ export class SignupComponent implements OnInit {
     }
 
     this.api.registerUser(payload).subscribe(response => {
+      // this.toastr.success('Registration successful!');
       console.log('Registration successful:', response);
+
       this.route.navigate(['/login'])
       // Add any additional code you want to run after the registration is complete
     }, error => {
       console.log('Registration failed:', error);
+
       // Add any error handling code here
     });
 

@@ -1,5 +1,27 @@
-<p>dashboard works!</p>
-<button (click)="logOut()" type="button">logout</button>
-<p>{{firstName}}</p>
-<p>{{lastName}}</p>
-<p>{{isLoggedIn}}</p>
+<nav class="navbar ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" >Welcome <span> {{firstName}} {{lastName}}</span> </a>
+    <mat-menu #menu="matMenu">
+      <!-- <button mat-menu-item>
+        <i class="fa-solid fa-edit"></i>
+        <span>Edit Profile</span>
+      </button> -->
+      <button mat-menu-item>
+        <i class="fa-solid fa-question-circle"></i>
+        <span>Help</span>
+      </button>
+      <button mat-menu-item (click)="logOut()">
+        <i class="fa-solid fa-sign-out-alt"></i>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+    <button class="icon" mat-icon-button [matMenuTriggerFor]="menu" aria-label="User Menu">
+      <i class="fa-solid fa-user"></i>
+    </button>
+
+  </div>
+</nav>
+<app-card-flip></app-card-flip>
+
+
